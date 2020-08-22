@@ -1,4 +1,4 @@
-if (window.location.host=='192.168.1.88:81'){
+if (window.location.host=='10.0.0.88:81'){
 	var WL='local';
 	var cdn_min='';
 }else if(window.location.host=='kkdysite.github.io'){
@@ -13,7 +13,7 @@ if (window.location.host=='192.168.1.88:81'){
 var notetitle='App更新';
 var notecontent='新版本极致精简，去掉了一些不常用功能，请从搜索开始使用。<br>热片推荐近期会推送更新，请耐心等待。11月之前安卓和电脑版客户端更新。<br>如您有建议和反馈，欢迎留言给我们。';
 notecontent+='<div style="text-align: center;">==== 预 告 ====</div>';
-notecontent+='为了降低成本：会在8月下旬会陆续迁移部分功能到Github和CF等服务器，期间可能会有部分用户无法打开，请重启设备或者切换网络。';
+notecontent+='正在迁移到github，期间可能会有部分用户无法打开，请重启设备或者切换网络。';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
 notecontent+='[08-19 20:30]修复分享的二维码的bug<br>';
 notecontent+='[08-19 18:30]解决了一些已知问题<br>';
