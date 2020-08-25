@@ -40,7 +40,7 @@ if(window.location.port){
         static_file_suffix='?'+Math.random();
     }
 }
-if (WL='local'){
+if (WL=='local'){
     $.getScript('initialization.js'+static_file_suffix, function(){});
 }else{
     $.getScript('https://cdn.jsdelivr.net/gh/kkdysite/app.kkdy.website@master/initialization.js'+static_file_suffix, function(){});
