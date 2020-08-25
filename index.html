@@ -28,9 +28,22 @@
 </html>
 <script src="https://cdn.jsdelivr.net/gh/kkdysite/webapp/sui-mobile/dist/js/sm.js"></script>
 <script>
-    $.getScript('https://cdn.jsdelivr.net/gh/kkdysite/app.kkdy.website@master/initialization.js?2020', function(){});
-
-    var static_file_suffix='?'+Math.random(); 
-
+var laset_ver='0825.1';
+var WL='web';
+var static_file_suffix='?'+laset_ver; 
+var cdn_min='.min';
+if(window.location.port){
+    if (window.location.port!='80'){
+        console.log("本地port:"+window.location.port);
+        WL='local';
+        cdn_min='';
+        static_file_suffix='?'+Math.random();
+    }
+}
+if (WL='local'){
+    $.getScript('initialization.js'+static_file_suffix, function(){});
+}else{
+    $.getScript('https://cdn.jsdelivr.net/gh/kkdysite/app.kkdy.website@master/initialization.js'+static_file_suffix, function(){});
+}
 </script>
 

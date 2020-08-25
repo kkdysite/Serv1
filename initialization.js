@@ -1,15 +1,6 @@
 /* 区分测试还是线上*/
-var WL='web';
-static_file_suffix='';
-var cdn_min='.min';
-if(window.location.port){
-	if (window.location.port!='80'){
-		console.log("本地port:"+window.location.port);
-		WL='local';
-		cdn_min='';
-		static_file_suffix='?'+Math.random();
-	}
-}else{
+
+if (WL!='local'){
 	for (i = 0; i < 20; i++) {
 		console.log(i+' 自学编程，业余开发，熬夜无数，手下留情');
 	}
@@ -19,8 +10,8 @@ if(window.location.host=='kkdysite.github.io'){
 	static_file_suffix='';
 	cdn_min='';
 }
-/* 最后更新版本 */
-var laset_ver='0825.1';
+
+
 /* 首页公告 */
 var notetitle='最新说明';
 var notecontent='极致精简，去掉了一些不常用功能，请从搜索开始使用。';
