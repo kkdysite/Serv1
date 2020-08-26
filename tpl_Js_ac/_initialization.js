@@ -129,8 +129,8 @@ $(document).on("pageInit", function(e, pageId, $page) {
         }
     }
 });
-if (sessionStorage.getItem("ios_install")){
-    sessionStorage.removeItem('ios_install');
+if (localStorage.getItem("ios_install")){
+    localStorage.removeItem('ios_install');
     alert('请勿刷新本页，无法继续安装，请重新操作');
     window.location.href=window.location.href.split("?")[0];
 }
@@ -158,7 +158,7 @@ function get_ios_install(){
     $.getScript(tpl_Js_html[WL]+'homepage_ios_install_html'+cdn_min+'.js'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'homepage'+cdn_min+'.css'+static_file_suffix+'">'); 
-        sessionStorage.setItem("ios_install", '1') 
+        localStorage.setItem("ios_install", '1') 
     });
 }
 /* 打开首页 */
