@@ -36,17 +36,17 @@ app_var+=window.location.host;
  //模板文件地址 css js地址 api
 var cdn='https://cdn.jsdelivr.net/gh/kkdysite/app.kkdy.website@master/';
 var tpl_Js_html={
-	 'web':cdn+'/tpl_Js_html/',
+	 'web':cdn+'tpl_Js_html/',
 	 'local':'./tpl_Js_html/',
 	 'bak':"./tpl_Js_html/"
 };
 var tpl_css={
-	 'web':cdn+'/tpl_css/',
+	 'web':cdn+'tpl_css/',
 	 'local':'./tpl_css/',
 	 'bak':"./tpl_css/"
 	};
 var tpl_Js_ac={
-	 'web':cdn+'/tpl_Js_ac/',
+	 'web':cdn+'tpl_Js_ac/',
 	 'local':'./tpl_Js_ac/',
 	 'bak':"./tpl_Js_ac/"
 	};
