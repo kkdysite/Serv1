@@ -56,7 +56,7 @@ $(document).on("pageInit", function (e, pageId, $page) {
             $('.one_tip').html( webapp_tips[Math.floor(Math.random()*webapp_tips.length)] );
             setInterval(function(){
                $('.one_tip').html( webapp_tips[Math.floor(Math.random()*webapp_tips.length)] );
-            }, 10000);
+            }, 6000);
         }
 
     }
