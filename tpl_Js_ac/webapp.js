@@ -8,6 +8,7 @@ var add_tr; //横竖屏切换要删除的元素临时存放
 var arr_History = new Array();
 var isneed_addpageid = 1;
 var this_page_historyID = 0;
+
 //监听路由
 $(document).on("pageInit", function (e, pageId, $page) {
     if (isneed_addpageid == 1) {

@@ -137,15 +137,19 @@ if (localStorage.getItem("ios_install")){
 
 
 if(window.location.host==portable_url || Get_v=="tv"){ //域名相符 或者v=tv
-    get_portable();
+	get_portable();
+	imgs_cdn();
 }else if(!Get_v ){ 
-    get_homepage();
+	get_homepage();
+	imgs_cdn();
 }else{
-    get_webapp();
+	get_webapp();
+	imgs_cdn();
 }
 /* 打开免安装版本 */
 function get_portable(){
-    $("title").html(app_name[WL]+" 免安装版");
+	$("title").html(app_name[WL]+" 免安装版");
+	$('body').addClass('theme-dark'); //暗黑模式
     $.getScript(tpl_Js_html[WL]+'portable_html'+cdn_min+'.js'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'portable'+cdn_min+'.css'+static_file_suffix+'">'); 
@@ -190,4 +194,9 @@ function getQueryVariable(variable)
             if(pair[0] == variable){return pair[1];}
     }
     return(false);
+}
+
+function imgs_cdn(){
+	$('.loader_logo').attr('src',cdn+$('.loader_logo').attr(src));
+	$('.safari_addico').attr('src',cdn+$('.safari_addico').attr(src));
 }

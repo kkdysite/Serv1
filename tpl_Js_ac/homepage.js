@@ -128,13 +128,13 @@ var p_set = {
             $('.issafari').hide(); //打开安装提示
             $('.tuijianlink').html("查看如何用Safari打开"); //推荐下载名称
             $('.tuijianlink').attr('href', '#page_safari'); //推荐按钮的链接
-            $('.bef_tuijianlink').html('你可以继续注册账号或者查看其他信息。但是iPhone和ipad因为系统限制，不允许此类app在第三方浏览器上完成客户端安装，如果要安装客户端，请使用手机自带的Safari浏览器打开本页面。');
+            $('.bef_tuijianlink').html('因iPhone和iPad的系统限制，不可以在微信QQ等第三方浏览器内安装，需要您使用设备自带的Safari浏览器安装本App（你的设备上肯定有的），您可以注册账号或者查看其他平台客户端下载，或者使用Safari打开后安装本app');
         
         }
         var open_safari_html='';
         //判断是否在微信或者qq里面
         if( (/micromessenger/.test(user_agent) ) ||  (/qq/.test(user_agent) ) ) { //微信
-            open_safari_html='如果是在微信或QQ中打开的，点击屏幕右上角的三个点，在弹出的菜单中选择 类似指南针的图标，在 Safari 中 打开 即可。<img src="https://cdn.jsdelivr.net/gh/kkdysite/webapp/tpl_img/open_from_wechat_qq.jpg" /><br>或者';
+            open_safari_html='如果是在微信或QQ中打开的，点击屏幕右上角的三个点，在弹出的菜单中选择 类似指南针的图标，在 Safari 中 打开 即可。<img src="'+cdn+'/tpl_img/open_from_wechat_qq.jpg" class="open_from_wechat_qq" /><br>或者';
         }
         
         open_safari_html+='复制本页面地址，返回手机桌面，找到 Safari 打开，地址栏输入地址。<div class="copy_url_txt" id="myurl">'+MYURL[0]+'</div> <a href="#" data-clipboard-action="copy" class="copymyurl" data-clipboard-target="#myurl">复制地址</a><br><img src="'+cdn+'tpl_img/open_safari_fromdesktop.jpg" />';

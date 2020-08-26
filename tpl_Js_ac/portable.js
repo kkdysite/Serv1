@@ -1,10 +1,6 @@
-
 var int_setInterval;
 var int_setInterval_fav;
-
-$('body').addClass('theme-dark');
 get_new_favlist();
-
 function get_new_favlist() { 
     if (localStorage.getItem(localStor_name_u_portable_fav)) 
     { 
