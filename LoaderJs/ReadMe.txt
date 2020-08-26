@@ -1,3 +1,1 @@
-Apk_loader.html ·Åµ½ apk»òÕßexeÀïÃæ
-
-temp_Loader_var.js ÓÃÓÚÅĞ¶ÏÊÇ·ñÍ¨µÄ
+æ—§ç‰ˆæœ¬å…¼å®¹æ€§
