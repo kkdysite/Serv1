@@ -137,7 +137,7 @@ var p_set = {
             open_safari_html='如果是在微信或QQ中打开的，点击屏幕右上角的三个点，在弹出的菜单中选择 类似指南针的图标，在 Safari 中 打开 即可。<img src="https://cdn.jsdelivr.net/gh/kkdysite/webapp/tpl_img/open_from_wechat_qq.jpg" /><br>或者';
         }
         
-        open_safari_html+='复制本页面地址，返回手机桌面，找到 Safari 打开，地址栏输入地址。<div class="copy_url_txt" id="myurl">'+MYURL[0]+'</div> <a href="#" data-clipboard-action="copy" class="copymyurl" data-clipboard-target="#myurl">复制地址</a><br><img src="'+cdn+'img/open_safari_fromdesktop.jpg" />';
+        open_safari_html+='复制本页面地址，返回手机桌面，找到 Safari 打开，地址栏输入地址。<div class="copy_url_txt" id="myurl">'+MYURL[0]+'</div> <a href="#" data-clipboard-action="copy" class="copymyurl" data-clipboard-target="#myurl">复制地址</a><br><img src="'+cdn+'tpl_img/open_safari_fromdesktop.jpg" />';
         $('#page_safari .htmls').html(open_safari_html);
     }
 
