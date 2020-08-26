@@ -112,11 +112,6 @@ var hotKeyWords='重启之极海听雷|漂亮书生|大侠霍元甲|他其实没
 hotKeyWords+='|上海王|如此可爱的我们|香肠派对|花木兰之大漠营救|连环追击|怪兽猎人|哥斯拉2|狙击手|怪物先生|大幻术师|征途|哪吒之魔童降世|铁血神探';
 
 
-
-//调用index.js
-$.getScript(tpl_Js_ac[WL]+'_mian'+cdn_min+'.js'+static_file_suffix, function(){});
-
-
 var MYURL=window.location.href.split("#");  //首页地址
 if (!MYURL[1]){MYURL[1]='';} //赋值下标1
 var Get_v=getQueryVariable('v');//获取url的v
