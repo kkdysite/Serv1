@@ -13,3 +13,4 @@
 .nosafari,.issafari{display:none;}
 .alldownloadlink a{ margin: 0.2rem;white-space:nowrap; display: block; float: left;}
 .alldownloadlink  .card{clear: both;}
+.dl_link_name span{font-size: 0.5rem;}

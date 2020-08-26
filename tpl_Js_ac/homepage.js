@@ -31,12 +31,12 @@ var p_set = {
             'html': "备用下载地址2：<a href='/ClientApp/kkdy.Phone.2.2.apk' target='_bank' external>直连下载（慢）</a><br>下载后是apk文件，请在设置中允许安装未知来源的应用程序，否则不能安装。   <br>   部分设备提示版本更新，忽略即可。不影响正常使用。   <br>   通常在 系统设置 找到 未知来源 并勾选，不同品牌手机设置项目位置差异大，在设置中搜索或查看 系统安全 或 应用程序配置 或 未知来源应用权限管理列表 等位置。因为没有在对应品牌的安卓手机市场上架，所以需要允许安装未知来源软件。   "
         },
         'windows': {
-            'name': 'Win电脑','button_name': "下载Win电脑版",'dl_link_name': '下载 看看电影 安装包',
+            'name': 'Win电脑','button_name': "下载Win电脑版",'dl_link_name': '下载 看看电影 安装包<span> 网盘 </span>',
             'dl_link_url': 'https://kkdy.lanzous.com/b00trimah',
             'html': "备用下载地址：<a href='/ClientApp/kkdy.site.Win32.exe' target='_bank' external>直连下载（慢）</a> <br>部分电脑可能会提示检查风险，请点其他 允许运行即可。 <br> 注意：基于win10开发，兼容win7（需要用兼容性模式运行) "
         },
         'mac': {
-            'name': 'mac电脑','button_name': "下载mac版本",'dl_link_name': '下载 看看电影.app',
+            'name': 'mac电脑','button_name': "下载mac版本",'dl_link_name': '下载 看看电影.app<span> 网盘 </span>',
             'dl_link_url': 'https://kkdy.lanzous.com/b00trik8d',
             'html': "备用下载地址2：<a href='/ClientApp/kkdy.site.MacApp.zip' target='_bank' external>直连下载（慢）</a><br>mac版下载后解压，打开访达，拖动到应用程序里面。首次运行可能会提示安全风险，在系统偏好设置 安全与隐私 打开。以后打开不会再继续提示。<br>仅支持macos10.12 以后的系统。更低版本请使用免安装版"
         },
