@@ -72,11 +72,11 @@ $(document).on("pageInit", function (e, pageId, $page) {
 
     //初始化 分享 主要二维码
     if(pageId == "page_u_sharp") {
-        var temp_URl='';
+        $('#shap_qrcode').empty();
         jQuery('#shap_qrcode').qrcode({
             render: "canvas", //也可以替换为table
             foreground: "#000",
-            text: "http://app.kkdy.website/?reg=1&uid=9900" + $(".local_user_id").val()
+            text: SharpUrl_reg_uid.replace('UID',Invitation_code_prefix+""+$(".local_user_id").val()) 
           });
     }
     //初始化 搜索 YourKeywords

@@ -32,16 +32,16 @@ if(window.location.host==portable_url || Get_v=="tv"){ //域名相符 或者v=tv
 /* 打开免安装版本 */
 function get_portable(){
     $("title").html(app_name[WL]+" 免安装版");
-    $.getScript(tpl_Js_html[WL]+'portable_html'+cdn_min+'.js?'+static_file_suffix, function(){
+    $.getScript(tpl_Js_html[WL]+'portable_html'+cdn_min+'.js'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'portable'+cdn_min+'.css'+static_file_suffix+'">'); 
-        $.getScript(tpl_Js_ac[WL]+'portable'+cdn_min+'.js?'+static_file_suffix, function(){});
+        $.getScript(tpl_Js_ac[WL]+'portable'+cdn_min+'.js'+static_file_suffix, function(){});
 
     });
 }
 function get_ios_install(){
     $("title").html(app_name[WL]);
-    $.getScript(tpl_Js_html[WL]+'homepage_ios_install_html'+cdn_min+'.js?'+static_file_suffix, function(){
+    $.getScript(tpl_Js_html[WL]+'homepage_ios_install_html'+cdn_min+'.js'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'homepage'+cdn_min+'.css'+static_file_suffix+'">'); 
         sessionStorage.setItem("ios_install", '1') 
@@ -52,17 +52,17 @@ function get_homepage(){
     $.getScript(tpl_Js_html[WL]+'homepage_html'+cdn_min+'.js?'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'homepage'+cdn_min+'.css'+static_file_suffix+'">'); 
-        $.getScript(tpl_Js_ac[WL]+'homepage'+cdn_min+'.js?'+static_file_suffix, function(){});
+        $.getScript(tpl_Js_ac[WL]+'homepage'+cdn_min+'.js'+static_file_suffix, function(){});
 
     });
 }
 /*   打开webapp */
 function get_webapp(){
     $("title").html(app_name[WL]);
-    $.getScript(tpl_Js_html[WL]+'webapp_html'+cdn_min+'.js?'+static_file_suffix, function(){
+    $.getScript(tpl_Js_html[WL]+'webapp_html'+cdn_min+'.js'+static_file_suffix, function(){
         $("body").html(text);
         $('body').append('<link rel="stylesheet" href="'+tpl_css[WL]+'webapp'+cdn_min+'.css'+static_file_suffix+'">'); 
-        $.getScript(tpl_Js_ac[WL]+'webapp'+cdn_min+'.js?'+static_file_suffix, function(){});
+        $.getScript(tpl_Js_ac[WL]+'webapp'+cdn_min+'.js'+static_file_suffix, function(){});
 
     });
 }
