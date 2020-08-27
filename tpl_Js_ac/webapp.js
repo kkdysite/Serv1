@@ -96,12 +96,12 @@ if ($('.page-current').attr('id')=='page-loader') {
     $('.loader_jump span').html(loader_time[WL]);
     int_setInterval1 = setInterval(function () {
         $('.loader_jump span').html($('.loader_jump span').html() - 1);
-        if ($('.loader_jump span').html() <= 0) {
+        if ($('.loader_jump span').html() <= 1) {
             gotoindex();
         }
     }, 1000);
 }
-
+ 
 // 后退按钮   --
 function Goback() {
     isneed_addpageid = 0;
