@@ -91,6 +91,7 @@ $(document).on("pageInit", function (e, pageId, $page) {
 
 });
 
+
 //引导页跳转 window.location.hash 改为用 当前页面的id判断
 if ($('.page-current').attr('id')=='page-loader') { 
     $('.loader_jump span').html(loader_time[WL]);
@@ -275,6 +276,9 @@ $(function () { setTimeout(function () { $(".hidden5s").hide(); }, 3000); })
 // 自动填入关键词
 $(document).on('click', '.keywords span', function () {
     $("#searchinput").val($(this).html());
+    if($('.page-current .content').scrollTop() > 20){
+        $('.page-current .content').animate({scrollTop: 0}, 300);
+    }
 });
 //开始搜索，并处理一些字符串锅炉
 function search() {
