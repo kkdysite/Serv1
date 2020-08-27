@@ -197,6 +197,6 @@ function getQueryVariable(variable)
 }
 
 function imgs_cdn(){
-	$('.loader_logo').attr('src',cdn+$('.loader_logo').attr(src));
-	$('.safari_addico').attr('src',cdn+$('.safari_addico').attr(src));
+	$('.loader_logo').attr('src',cdn+$('.loader_logo').attr('src'));
+	$('.safari_addico').attr('src',cdn+$('.safari_addico').attr('src'));
 }
