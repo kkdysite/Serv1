@@ -409,6 +409,7 @@ function open_vod_fromJson(json_i, fromLoalStorage) {
     //销毁 模板 为了避免冲突 并保存到全局变量
     vodShowHtml_remove_add = $("#Show_vodFromJson_to_html #play_vod").detach();
     open_Show_vod_guset();//打开播放层并初始化
+    save_hotvod(JSON_vods[json_i]); //更新播放记录统计
     if (JSON_vods[json_i].vod_down_url != "" == "") {
         //删除下载相关的内容
         $("#Show_Vod_to_guest #downloadbutton").detach(); //下载按钮
@@ -421,6 +422,32 @@ function open_vod_fromJson(json_i, fromLoalStorage) {
         get_news_vod_info(JSON_vods[json_i].vod_id);//更新本视频
     }
 
+}
+/* 更新播放 统计 */
+function save_hotvod(temp_json){
+    var Postdata=$("#userinfo_local").serialize()+"&vod_id="+temp_json.vod_id;
+    Postdata+="&type_id="+temp_json.type_id;
+    Postdata+="&type_id_1="+temp_json.type_id_1;
+    Postdata+="&vod_name="+temp_json.vod_name;
+    $.ajax({
+        url: api_vhost[WL]+"?ac=save_hotvod",
+        type: "post",
+        dataType: "json",
+        data: Postdata,
+        success: function (r) {
+            if (r.code == 1) {
+                console.log("记录 热门影片成功..")
+            }
+            else {
+                console.log("后台记录 热门影片 "+r.msg);
+            }
+        },
+        error: function () {
+            console.log("后台记录 热门影片 网络问题");
+        },
+        complete: function () {
+        }
+    });
 }
 /* 打开播放层并初始化 */
 function open_Show_vod_guset(){
