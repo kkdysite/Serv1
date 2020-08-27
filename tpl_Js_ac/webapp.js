@@ -425,6 +425,7 @@ function open_vod_fromJson(json_i, fromLoalStorage) {
     vod_json_html(fromLoalStorage,JSON_vods,json_i); //格式化一组json数据的第i条 写到单独函数里面 方便复用
     //移除 模板的class  
     $("#Show_vodFromJson_to_html #play_vod").removeClass("Show_Vod_to_guest_class");
+    $("#Show_vodFromJson_to_html #play_vod").removeClass("Show_Vod_id_"+JSON_vods[json_i].vod_id);
     //销毁 模板 为了避免冲突 并保存到全局变量
     vodShowHtml_remove_add = $("#Show_vodFromJson_to_html #play_vod").detach();
     open_Show_vod_guset();//打开播放层并初始化
@@ -470,6 +471,7 @@ function save_hotvod(temp_json){
 }
 /* 打开播放层并初始化 */
 function open_Show_vod_guset(){
+    Check_and_modify();//上次播放
     if(webapp_tips){
         var temp_html='';
         var temp_x=0;
@@ -487,6 +489,7 @@ function vod_json_html(fromLoalStorage,JSON_vods,json_i){
  //修改 Show_vodFromJson_to_html play_vod 的内容
     //修改css属性 方便后面打开
     $("#Show_vodFromJson_to_html #play_vod").addClass("Show_Vod_to_guest_class");
+    $("#Show_vodFromJson_to_html #play_vod").addClass("Show_Vod_id_"+JSON_vods[json_i].vod_id);
     $('#Show_vodFromJson_to_html h1').html("正在播放 " + JSON_vods[json_i].vod_name); //标题
     $('.vod_name').html(JSON_vods[json_i].vod_name); //所有 vod_name
     $('#Show_vodFromJson_to_html .pianming').html(JSON_vods[json_i].vod_name); //片名
@@ -565,6 +568,7 @@ function vod_json_html(fromLoalStorage,JSON_vods,json_i){
     });
     var Show_vodFromJson_to_html = $("#Show_vodFromJson_to_html").html();
     $("#Show_Vod_to_guest").empty(); //先清空 要加载的位置 防止同名冲突
+   
     $("#Show_Vod_to_guest").append(Show_vodFromJson_to_html); //填充
 }
 //关闭 并销毁一个临时层
@@ -588,12 +592,13 @@ function get_news_vod_info(int_vod_id){
             beforeSend: function () {},
             success: function (r) {
                 if (r.code == 1) {
-                    $(".updatethisvoding").html("更新成功!");
+                    var d = new Date();
+                    var temp_str='';
+                    if (d.getHours()<10){temp_str='0'+d.getHours();}else{temp_str=d.getHours();}
+                    if (d.getMinutes()<10){temp_str+=':0'+d.getMinutes();}else{temp_str+=':'+d.getMinutes();}
+                    if (d.getSeconds()<10){temp_str+=' 0'+d.getSeconds();}else{temp_str+=' '+d.getSeconds();}
+                    $(".updatethisvoding").html("最后更新： "+temp_str);
                     console.log('后台更新影片成功');
-                    setTimeout(function () {
-                        $(".updatethisvoding").html(temp);
-                        $(".updatethisvoding").hide();
-                     }, 2000);
                     //把json存入
                     localStorage_played("", "", r.list[0]);
                     $("#Show_vodFromJson_to_html").empty(); //如果模板使用过清空模板
@@ -1528,11 +1533,14 @@ function Check_and_modify(){
         for ( i = 0; i < json_length; i++) {
             if(json_rows[i].played_jishu){
                 $(".vodid_"+json_rows[i].vod_id+" .nextpalyed").html("上次播放："+json_rows[i].played_jishu); 
+                $(".Show_Vod_id_"+json_rows[i].vod_id+" .shangci").html("上次播放："+json_rows[i].played_jishu); 
             }else{
                 $(".vodid_"+json_rows[i].vod_id+" .nextpalyed").empty(); 
+                $(".Show_Vod_id_"+json_rows[i].vod_id+" .shangci").empty(); 
             }
         }
     } 
+
 
 }
 //解析用户数据 到html

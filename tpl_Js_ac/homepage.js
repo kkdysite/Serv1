@@ -103,7 +103,7 @@ var p_set = {
     $('.p_name').html(p_set[p_name]['name']);//提示设备
     $('.tuijianlink').html(p_set[p_name]['button_name']); //推荐下载名称
     $('.tuijianlink').attr('href', '#page_dl_'+p_name); //推荐按钮的链接
-    $('.gotoindex').attr('href', '#page_dl_'+p_name); //推荐按钮的链接
+    //$('.gotoindex').attr('href', '#page_dl_'+p_name); //推荐按钮的链接
     $('#page_dl_'+p_name+" .gotoindex").hide();//隐藏无用的推荐链接 gotoindex
     $('.bef_tuijianlink').html("推荐你选择<br>");
     $('.nosafari').show(); 

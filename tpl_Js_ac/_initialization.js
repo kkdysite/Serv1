@@ -11,7 +11,7 @@ if(window.location.host=='kkdysite.github.io'){
 /* 首页跳转时间 */
 var loader_time={
 	'web':3,
-	'local':10,
+	'local':0,
 	'bak':3
 };
 /* 首页公告 */
