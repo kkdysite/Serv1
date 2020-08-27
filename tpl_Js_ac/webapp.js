@@ -597,7 +597,7 @@ function get_news_vod_info(int_vod_id){
                     if (d.getHours()<10){temp_str='0'+d.getHours();}else{temp_str=d.getHours();}
                     if (d.getMinutes()<10){temp_str+=':0'+d.getMinutes();}else{temp_str+=':'+d.getMinutes();}
                     if (d.getSeconds()<10){temp_str+=' 0'+d.getSeconds();}else{temp_str+=' '+d.getSeconds();}
-                    $(".updatethisvoding").html("最后更新： "+temp_str);
+                    $(".updatethisvoding").html("已经为您同步最新数据： 今天 "+temp_str);
                     console.log('后台更新影片成功');
                     //把json存入
                     localStorage_played("", "", r.list[0]);
