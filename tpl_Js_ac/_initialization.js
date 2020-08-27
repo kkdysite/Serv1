@@ -8,6 +8,12 @@ if(window.location.host=='kkdysite.github.io'){
 	static_file_suffix='';
 	cdn_min='';
 }
+/* 首页跳转时间 */
+var loader_time={
+	'web':3,
+	'local':10,
+	'bak':3
+};
 /* 首页公告 */
 var notetitle='最新说明';
 var notecontent='极致精简，去掉了一些不常用功能，请从搜索开始使用。';

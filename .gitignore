@@ -3,3 +3,4 @@
 .user.ini
 noftp_tpl_html/
 ClientApps/
+.DS_Store

@@ -8,7 +8,7 @@ var add_tr; //横竖屏切换要删除的元素临时存放
 var arr_History = new Array();
 var isneed_addpageid = 1;
 var this_page_historyID = 0;
-
+var int_setInterval1;
 //监听路由
 $(document).on("pageInit", function (e, pageId, $page) {
     if (isneed_addpageid == 1) {
@@ -90,6 +90,18 @@ $(document).on("pageInit", function (e, pageId, $page) {
     
 
 });
+
+//引导页跳转 window.location.hash 改为用 当前页面的id判断
+if ($('.page-current').attr('id')=='page-loader') { 
+    $('.loader_jump span').html(loader_time[WL]);
+    int_setInterval1 = setInterval(function () {
+        $('.loader_jump span').html($('.loader_jump span').html() - 1);
+        if ($('.loader_jump span').html() <= 0) {
+            gotoindex();
+        }
+    }, 1000);
+}
+
 // 后退按钮   --
 function Goback() {
     isneed_addpageid = 0;
@@ -799,22 +811,10 @@ window.addEventListener("onorientationchange" in window ? "orientationchange" : 
 
 // 横竖屏   --end
 
-//引导页跳转
-var int_setInterval1;
-if (window.location.hash == "#page-loader" || window.location.hash == "#page_dl_ios"  || window.location.hash == "") {
-    int_setInterval1 = setInterval(function () {
-        $('.loader_jump span').html($('.loader_jump span').html() - 1);
-        if ($('.loader_jump span').html() <= 0) {
-            gotoindex();
-        }
-    }, 1000);
-}
+
 function gotoindex() {
     int_setInterval1 = window.clearInterval(int_setInterval1);
-    var u_info= JSON.parse(localStorage.getItem(localStor_name_u_info));
-
-    if (u_info!=null){
-       
+    if (localStorage.getItem(localStor_name_u_info)){
         get_news_userinfo();//再强制获取一次用户数据
         $.router.load("#page-index");
     }else{
@@ -1172,8 +1172,7 @@ function format(timestamp) {
     return year + '-' + add0(month) + '-' + add0(date) + ' ' + add0(hours) + ':' + add0(minutes) + ':' + add0(seconds);
 }
 
-//新会员 自动升级 过期会员自动提示过期
-u_checkendtime(); //检查会员过期
+//会员自动提示过期
 function u_checkendtime() {
     var u_info = JSON.parse(localStorage.getItem(localStor_name_u_info));
     if(u_info){
