@@ -68,7 +68,7 @@ var localStor_name_u_played='played';
 var localStor_name_u_portable_fav='u_portable_fav2020';
 
 //var static_file_suffix ="";
-var portable_url='t.kkdy.website/p';
+var portable_url='app.kkdy.website/p';
 
 //解析服务器
 var ParseServ1="https://api.fenglinys.net/?url=";
