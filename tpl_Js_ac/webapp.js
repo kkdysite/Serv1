@@ -87,10 +87,25 @@ $(document).on("pageInit", function (e, pageId, $page) {
         }
         get_hotKeyWords(); //设置热搜关键词
     }
+
+    //初始化 快捷登录
+    if(pageId == "page_login_pin") {
+        $('#Tvurl').html('http://'+portable_url);
+    }
     
 
 });
 
+
+var clipboard = new ClipboardJS('.copyTvurl');
+clipboard.on('success', function (e) {
+    $.toast("复制成功，你可以粘贴到别处了");
+    e.clearSelection();
+});
+clipboard.on('error', function (e) {
+    $.toast("复制失败，请手动复制");
+
+});
 
 //引导页跳转 window.location.hash 改为用 当前页面的id判断
 if ($('.page-current').attr('id')=='page-loader') { 
@@ -1036,7 +1051,7 @@ function u_findpass() {
 }
 //用户pin登录
 function u_save_login_pin() {
-    var randomPin = $.trim($("#form_login_pin input[name='randomPin']").val()); //
+    var randomPin = $.trim($("input[name='randomPin']").val()); //
     if (randomPin.length <4){
         $.toast('快捷码应是5-6位数字');
         return;

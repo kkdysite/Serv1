@@ -9,18 +9,13 @@ function get_new_favlist() {
         u_fav_list(); 
         $.router.load("#page_fav");
     }else{
-        $.ajax({ 
-            url: api_vhost[WL]+"?ac=u_login_get_pin", 
-            type: "post", dataType: "json", 
-            data: $('#userinfo_local').serialize(), 
-            success: function (r) { 
-                if (r.code == 1) { $("#user_loginpin").html(r.user_loginpin); 
-                int_setInterval = setInterval("clock_u_login_pin_check()", 1500); 
-                } else { $.toast("无法获取登录码"); } 
-            }, 
-            error: function () { $.toast("网络问题，无法获取登录码"); } 
-        });
+        $("#user_loginpin").html(getRandomNumberByRange(100000,999999));
+        int_setInterval = setInterval("clock_u_login_pin_check()", 2000); 
     }
+}
+/*  获取随机数 */
+function getRandomNumberByRange(start, end) {
+    return Math.floor(Math.random() * (end - start) + start);
 }
 //获取收藏夹数据
 function u_fav_list() {

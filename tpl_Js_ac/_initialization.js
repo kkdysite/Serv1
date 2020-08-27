@@ -20,9 +20,8 @@ var notecontent='极致精简，去掉了一些不常用功能，请从搜索开
 notecontent+='热片推荐近期会推送更新，请耐心等待。11月之前安卓和电脑版客户端更新。<br>如您有建议和反馈，欢迎留言给我们。';
 notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
 notecontent+='<div class="hide MoreNote">';
-notecontent+='<div style="text-align: center;">==== 预 告 ====</div>';
-notecontent+='正在迁移到github，期间可能会有部分用户无法打开，请重启设备或者切换网络。';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
+notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
 notecontent+='[08-25 19:50]修复苹果设备横竖屏转回bug<br>  修复了app内的注册的bug<br>';
 notecontent+='[08-19 20:30]修复分享的二维码的bug<br>';
 notecontent+='[08-16 16:10]修复播放记录不能自动更新的bug<br>[08-13 23:30]新增资源库(天空云)<br>';
@@ -69,7 +68,7 @@ var localStor_name_u_played='played';
 var localStor_name_u_portable_fav='u_portable_fav2020';
 
 //var static_file_suffix ="";
-var portable_url='t.kkdy.website';
+var portable_url='t.kkdy.website/p';
 
 //解析服务器
 var ParseServ1="https://api.fenglinys.net/?url=";
@@ -142,7 +141,7 @@ if (localStorage.getItem("ios_install")){
 }
 
 
-if(window.location.host==portable_url || Get_v=="tv"){ //域名相符 或者v=tv
+if(Get_v=="tv" || Get_v=="p"){ //域名相符 或者v=tv
 	get_portable();
 	imgs_cdn();
 }else if(!Get_v ){ 
