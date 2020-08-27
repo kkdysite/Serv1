@@ -156,7 +156,7 @@ width: 100%; background: rgba(255, 255, 255, 0.3); padding: 5px; max-height: 200
 margin-top: 0.6rem;
 }
 .tools .button{float: left; margin: 0.1rem;}
-
+.PlayAllButtons{padding-bottom: 0.5rem;}
 .updatethisvoding{text-align: center; font-size: 0.5rem; margin: 0.5rem; display: none;}
 /* 右侧版权信息 */
 .app_var{text-align: center;font-size: 0.5rem;}
