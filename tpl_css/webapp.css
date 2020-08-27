@@ -23,6 +23,9 @@ span{text-transform: none} /* 取消大写属性 */
 #page-loader{position: absolute;top: 0;left: 0;width: 100%;min-height: 100%;height: auto;text-align: center;}
 .loader_logo{max-width: 300px;width: 35%; margin-top: 5rem}
 .loader_jump{font-size: 0.5rem;position:absolute; top: 1rem;width: 100%; padding-right: 1rem; text-align: right;}
+.loader_endtxt{font-size: 0.6rem;position:absolute; bottom: 1.5rem; line-height:1rem; width: 100%;}
+.loader_tip{font-size: 0.5rem; color: #555;}
+.theme-dark .loader_tip{ color: #ccc;}
 /* 首页 通知公告 更多内容 */
 .MoreNote{ display: none;}
 .one_tip{height: 3.5rem;display: flex;align-items: center;}

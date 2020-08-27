@@ -94,6 +94,7 @@ $(document).on("pageInit", function (e, pageId, $page) {
 //引导页跳转 window.location.hash 改为用 当前页面的id判断
 if ($('.page-current').attr('id')=='page-loader') { 
     $('.loader_jump span').html(loader_time[WL]);
+    if(webapp_tips){ $('.loader_tip').html('tip:'+ webapp_tips[Math.floor(Math.random()*webapp_tips.length)] ); }
     int_setInterval1 = setInterval(function () {
         $('.loader_jump span').html($('.loader_jump span').html() - 1);
         if ($('.loader_jump span').html() <= 1) {
