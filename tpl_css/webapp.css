@@ -31,6 +31,7 @@ span{text-transform: none} /* 取消大写属性 */
 .one_tip{height: 3.5rem;display: flex;align-items: center;}
 /* 快捷登录 */
 .copy_url_txt{display:block;padding:.2rem 1rem;border:1px solid red;background:#fff;color:red;}
+.theme-dark .copy_url_txt{background:#BBB;}
 /* 侧栏 */
 .h6title {font-size: 0.6rem;margin-top: 0.5rem;}
 .panel .col-33 a {font-size: 0.6rem;}
