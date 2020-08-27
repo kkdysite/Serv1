@@ -39,7 +39,7 @@ var app_var='<br>中文网址：看看电影.com<br>';
 app_var+='云版号：ver.'+laset_ver+'<br>';
 app_var+=window.location.host;
  //模板文件地址 css js地址 api
-var cdn='https://cdn.jsdelivr.net/gh/kkdysite/ServMian@master/';
+var cdn='https://cdn.jsdelivr.net/gh/kkdysite/ServMian0827@master/';
 var tpl_Js_html={
 	 'web':cdn+'tpl_Js_html/',
 	 'local':'./tpl_Js_html/',
