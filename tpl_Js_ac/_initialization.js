@@ -20,8 +20,9 @@ var notecontent='极致精简，去掉了一些不常用功能，请从搜索开
 notecontent+='热片推荐近期会推送更新，请耐心等待。11月之前安卓和电脑版客户端更新。<br>如您有建议和反馈，欢迎留言给我们。';
 notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
 notecontent+='<div class="hide MoreNote">';
+notecontent+='影片数据均由第三方资源库平台提供,1-6小时间隔自动同步。一般晚上10-11点左右资源库会集中更新。';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
-notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug<br>';
+notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug，请在手机设置-应用程序-看看电影-清除数据后重新打开<br>';
 notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
 notecontent+='[08-25 19:50]修复苹果设备横竖屏转回bug<br>  修复了app内的注册的bug<br>';
 notecontent+='[08-19 20:30]修复分享的二维码的bug<br>';

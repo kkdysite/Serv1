@@ -38,7 +38,7 @@ var p_set = {
         'mac': {
             'name': 'mac电脑','button_name': "下载mac版本",'dl_link_name': '下载 看看电影.app<span> 网盘 </span>',
             'dl_link_url': 'https://kkdy.lanzous.com/b00trik8d',
-            'html': "备用下载地址：<a href='http://clientapps.kkdy.website/kkdy.site.MacApp.zip' target='_bank' external>CF镜像直连下载（慢）</a><br>mac版下载后解压，打开访达，拖动到应用程序里面。首次运行可能会提示安全风险，在系统偏好设置 安全与隐私 打开。以后打开不会再继续提示。<br>仅支持macos10.12 以后的系统。更低版本请使用免安装版"
+            'html': "备用下载地址：<a href='http://clientapps.kkdy.website/kkdy.site.MacApp.zip' target='_bank' external>CF镜像直连下载（慢）</a><br>mac版下载后解压，打开访达，拖动到应用程序里面。首次运行可能会提示安全风险，无法打开。需要在系统偏好设置 安全与隐私 打开，以后可以正常打开。<br>基于macos10.15.3开发，其他版本如无法使用请使用免安装版"
         },
         'ios': {
             'name': 'IOS设备','button_name': "安装ios版本",'dl_link_name': '','dl_link_url': '',
