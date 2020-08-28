@@ -21,6 +21,7 @@ notecontent+='热片推荐近期会推送更新，请耐心等待。11月之前�
 notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
 notecontent+='<div class="hide MoreNote">';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
+notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug<br>';
 notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
 notecontent+='[08-25 19:50]修复苹果设备横竖屏转回bug<br>  修复了app内的注册的bug<br>';
 notecontent+='[08-19 20:30]修复分享的二维码的bug<br>';
