@@ -94,6 +94,12 @@ var p_set = {
         if (value['html'] != "") {
             temp_html += value['html'];
         }
+        if(value['button_name']!='使用免安装版'){
+            if( (/micromessenger/.test(user_agent) ) ||  (/qq/.test(user_agent) ) ) { //微信
+                temp_html='亲：微信或者QQ内置浏览器无法下载安装包，请用浏览器打开后下载。点击当前界面右上角的三个点，在弹出的菜单中选择 已安装的浏览器 打开,或者复制本地址手动选择浏览器打开。<br><br>'+temp_html;
+            }
+        }
+        
 
         $('#page_dl_' + name + ' .htmls').html(temp_html);
     });
