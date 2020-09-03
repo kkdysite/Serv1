@@ -675,7 +675,8 @@ function openUrl_in_newsWin(Str_url){
     const electron = require("electron");
     let BrowserWindow = electron.remote.BrowserWindow;
     let PlayWin = null;
-    PlayWin = new BrowserWindow ({width: 800, height:600})
+    PlayWin = new BrowserWindow ({width: 800, height:600});
+    PlayWin.setAlwaysOnTop(true,1);
     PlayWin.loadURL(Str_url);
     PlayWin.on("close", function(){PlayWin = null;});
 }
