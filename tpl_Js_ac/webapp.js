@@ -676,7 +676,8 @@ function openUrl_in_newsWin(Str_url){
     let BrowserWindow = electron.remote.BrowserWindow;
     let PlayWin = null;
     PlayWin = new BrowserWindow ({width: 800, height:600});
-    PlayWin.setAlwaysOnTop(true,1);
+   // PlayWin.setAlwaysOnTop(true,1);
+    PlayWin.setAlwaysOnTop(true, 'pop-up-menu'); //一定要这样设置 要不然在mac下全屏播放PPT的时候看不到
     PlayWin.loadURL(Str_url);
     PlayWin.on("close", function(){PlayWin = null;});
 }
