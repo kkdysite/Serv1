@@ -9,6 +9,10 @@ var arr_History = new Array();
 var isneed_addpageid = 1;
 var this_page_historyID = 0;
 var int_setInterval1;
+
+
+$('.user_email_text').html(webapp_user_email_text);
+
 //监听路由
 $(document).on("pageInit", function (e, pageId, $page) {
     if (isneed_addpageid == 1) {

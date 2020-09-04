@@ -190,3 +190,8 @@ margin-top: 0.6rem;
 
 .randomPin{width: 100%; clear: both; margin-bottom: 1rem; margin-top: 1rem;}
 .end_form_login_pin{margin-top: 1rem;}
+
+
+.user_email_text { padding: 0.6rem;
+ clear: both;    font-size: 0.5rem;
+}

@@ -22,6 +22,7 @@ notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_h
 notecontent+='<div class="hide MoreNote">';
 notecontent+='影片数据均由第三方资源库平台提供,1-6小时间隔自动同步。一般晚上10-11点左右资源库会集中更新。';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
+notecontent+='[09-04 18:246]优化注册的时候的邮箱提示<br>';
 notecontent+='[09-03 21:25]修复电脑版播放窗口被遮挡的bug<br>';
 notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug，请在手机设置-应用程序-看看电影-清除数据后重新打开<br>';
 notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
@@ -107,6 +108,7 @@ var vip_setting = {
 	"3650000": 50000
 };
 
+var webapp_user_email_text='请务必如实填写邮箱地址，我们不会轻易发邮件打扰您，您的邮箱地址我们也会加密保存。邮箱地址是唯一的在app被禁用、资源被下架后，我们可以通知您的app。<br>app每年进行至少一次新旧版本替换，旧版会失效,无法打开 我们会通过邮件通知您新版下载地址。<br>部分热门资源因为某些原因无法上架app，也会通过邮箱通知你临时地址。<br>也请您记住我们的邮箱地址 kkdysite@outlook.com 这也是在app无法打开的时候，您唯一可联系我们的途径。';
 
 var webapp_tips=new Array(
 	'偶尔无法播放重新点下剧集即可，或切换播放源和解析后再播放',

@@ -105,7 +105,10 @@ var p_set = {
     });
 
     var p_name =getos();
+    $('.user_email_text').html(webapp_user_email_text);
 
+
+    
     $('.p_name').html(p_set[p_name]['name']);//提示设备
     $('.tuijianlink').html(p_set[p_name]['button_name']); //推荐下载名称
     $('.tuijianlink').attr('href', '#page_dl_'+p_name); //推荐按钮的链接
@@ -114,7 +117,6 @@ var p_set = {
     $('.bef_tuijianlink').html("推荐你选择<br>");
     $('.nosafari').show(); 
     $('.nosafari_install_html').html('你只能通过苹果设备自带的Safari浏览器打开本页面才可以继续安装。')
-
         //检测 ios的safari
     if(p_name=='ios'){
         console.log("确定是ios");
