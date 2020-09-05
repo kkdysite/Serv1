@@ -828,7 +828,7 @@ function get_hotKeyWords() {
         $.each(arr_hotKeyWords, function () {
             temp_html  += ' <span>'+this+'</span> ';
         });
-        $('#hotKeyWords').html('<i>大家在搜：</i>'+temp_html+"<div class='clear'></div>");
+        $('#hotKeyWords').html('<i>近期热播：</i>'+temp_html+"<div class='clear'></div>");
     }
 }
 
