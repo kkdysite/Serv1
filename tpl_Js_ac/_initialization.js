@@ -16,7 +16,7 @@ var loader_time={
 };
 /* 首页公告 */
 var notetitle='最新说明';
-var notecontent='近期注册的会员均为永久有效，极致精简，去掉了一些不常用功能，请从搜索开始使用。';
+var notecontent='近期注册的会员均为永久有效。新版app极致精简，去掉了一些不常用功能，请从搜索开始使用。';
 notecontent+='热片推荐近期会推送更新，请耐心等待。11月之前安卓和电脑版客户端更新。<br>如您有建议和反馈，欢迎留言给我们。';
 notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
 notecontent+='<div class="hide MoreNote">';
