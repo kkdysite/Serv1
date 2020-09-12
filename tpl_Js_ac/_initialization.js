@@ -22,7 +22,8 @@ notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_h
 notecontent+='<div class="hide MoreNote">';
 notecontent+='影片数据均由第三方资源库平台提供,1-6小时间隔自动同步。一般晚上10-11点左右资源库会集中更新。';
 notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
-notecontent+='[09-04 18:246]优化注册的时候的邮箱提示<br>';
+notecontent+='[09-12 23:12]1.活动期间赠送会员均永久会员。<br>  2.调整播放来源顺序<br>';
+notecontent+='[09-04 18:24]优化注册的时候的邮箱提示<br>';
 notecontent+='[09-03 21:25]修复电脑版播放窗口被遮挡的bug<br>';
 notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug，请在手机设置-应用程序-看看电影-清除数据后重新打开<br>';
 notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
@@ -36,7 +37,6 @@ var SharpUrl_reg='http://app.kkdy.website/#page_reg';
 var SharpUrl_dl_uid='http://app.kkdy.website/?uid=UID';
 var SharpUrl_reg_uid='http://app.kkdy.website/?uid=UID#page_reg';
 var Invitation_code_prefix=9900; //邀请码前缀 ★
-
 
 var app_name={'web':'看看电影.com','local':'测试_看看电影','bak':'看看电影(备用)'};
 var app_var='<br>中文网址：看看电影.com<br>';
@@ -81,6 +81,8 @@ var ParseServ3="https://jx.fuxing56.com/beiyong/?url=";
 var ParseServ4="https://jx.yunboys.cn/?url=";
 //播放器配置
 var players_url = {
+	"kuyun": ["kuyun", "欧凯云", "-", "-", "-", "-"],
+	"tkm3u8": ["tkm3u8", "天空云", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url="],
 	"qq": ["qq", "腾讯", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
 	"youku": ["youku", "优酷", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
 	"qiyi": ["qiyi", "爱奇艺", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
@@ -90,9 +92,7 @@ var players_url = {
 	"wasu": ["wasu", "华数", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
 	"letv": ["letv", "乐视", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
 	"m1905": ["m1905", "1905", ParseServ1 ,ParseServ2, ParseServ3, ParseServ4],
-	"funshion": ["funshion", "风行", ParseServ1, ParseServ2, ParseServ3, ParseServ4],
-	"kuyun": ["kuyun", "欧凯云", "-", "-", "-", "-"],
-	"tkm3u8": ["tkm3u8", "天空云", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url=", "https://jx.huishij.com/yun/?url="]
+	"funshion": ["funshion", "风行", ParseServ1, ParseServ2, ParseServ3, ParseServ4]
 };
 //会员设定 只用来计算剩余积分
 var vip_setting = {
@@ -119,7 +119,7 @@ var webapp_tips=new Array(
 	'广告都是资源库或者解析平台的，套路深勿相信！',
 	'如果喜欢这个app，请推荐给您的朋友'
 	);
-var hotKeyWords='信条|花木兰2020|索莱|重启之极海听雷|春江水暖|托马索|大卫·科波菲尔的个人史|漂亮书生|大侠霍元甲|他其实没有那么爱你|穿盔甲的少女|非常目击|航海王|幸福还会来敲门|忘不了餐厅|且听凤鸣|极限挑战宝藏行|摩天大楼|月光恋|潮玩人类在哪里|青春环游记|乐队的夏天';
+var hotKeyWords='琉璃美人煞|且听凤鸣|信条|花木兰2020|索莱|重启之极海听雷|春江水暖|托马索|大卫·科波菲尔的个人史|漂亮书生|大侠霍元甲|他其实没有那么爱你|穿盔甲的少女|非常目击|航海王|幸福还会来敲门|忘不了餐厅|且听凤鸣|极限挑战宝藏行|摩天大楼|月光恋|潮玩人类在哪里|青春环游记|乐队的夏天';
 hotKeyWords+='|上海王|如此可爱的我们|香肠派对|花木兰之大漠营救|连环追击|怪兽猎人|哥斯拉2|狙击手|怪物先生|大幻术师|征途|哪吒之魔童降世|铁血神探';
 
 
