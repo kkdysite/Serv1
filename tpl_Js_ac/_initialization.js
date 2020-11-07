@@ -15,21 +15,15 @@ var loader_time={
 	'bak':3
 };
 /* 首页公告 */
-var notetitle='最新说明';
-var notecontent='近期注册的会员均为永久有效。新版app极致精简，去掉了一些不常用功能，请从搜索开始使用。';
-notecontent+='热片推荐近期会推送更新，请耐心等待。11月之前安卓和电脑版客户端更新。<br>如您有建议和反馈，欢迎留言给我们。';
-notecontent+='<br>最后更新: 2020.'+laset_ver+'<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
+var notetitle='重要通知！您的APP需要更新';
+var notecontent='因为成本问题，需要停用旧版app，请卸载后免费更新到最新版';
+notecontent+='新版下载地址中文网址： http://看看电影.com 英文网址：http://app.kkdy2021.xyz/';
+notecontent+='<br> 版本说明<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
 notecontent+='<div class="hide MoreNote">';
-notecontent+='影片数据均由第三方资源库平台提供,1-6小时间隔自动同步。一般晚上10-11点左右资源库会集中更新。';
-notecontent+='<div style="text-align: center;">==== 最近更新 ====</div>';
-notecontent+='[09-12 23:12]1.活动期间赠送会员均永久会员。<br>  2.调整播放来源顺序<br>';
-notecontent+='[09-04 18:24]优化注册的时候的邮箱提示<br>';
-notecontent+='[09-03 21:25]修复电脑版播放窗口被遮挡的bug<br>';
-notecontent+='[08-29 14:50]修复部分安卓设备无法打开的bug，请在手机设置-应用程序-看看电影-清除数据后重新打开<br>';
-notecontent+='[08-27 19:50]修复苹果设备的快捷登录，更换免安装版url<br>';
-notecontent+='[08-25 19:50]修复苹果设备横竖屏转回bug<br>  修复了app内的注册的bug<br>';
-notecontent+='[08-19 20:30]修复分享的二维码的bug<br>';
-notecontent+='[08-16 16:10]修复播放记录不能自动更新的bug<br>[08-13 23:30]新增资源库(天空云)<br>';
+notecontent+='本版app将在11月12日左右停止无法打开，我们提供了新版请访问 看看电影.com 更新下载';
+notecontent+='<div style="text-align: center;">==== 详细说明 ====</div>';
+notecontent+='安卓版 机顶盒x5版本 ios苹果版本 已经提供新版 并已经可以使用<br>';
+notecontent+='Win电脑版本 Mac电脑版 要晚几天更新<br>';
 notecontent+='</div>';
 
 var SharpUrl_dl='http://app.kkdy.website/';
@@ -111,13 +105,13 @@ var vip_setting = {
 var webapp_user_email_text='请务必如实填写邮箱地址，我们不会轻易发邮件打扰您，您的邮箱地址我们也会加密保存。邮箱地址是唯一的在app被禁用、资源被下架后，我们可以通知您的app。<br>app每年进行至少一次新旧版本替换，旧版会失效,无法打开 我们会通过邮件通知您新版下载地址。<br>部分热门资源因为某些原因无法上架app，也会通过邮箱通知你临时地址。<br>也请您记住我们的邮箱地址 kkdysite@outlook.com 这也是在app无法打开的时候，您唯一可联系我们的途径。';
 
 var webapp_tips=new Array(
-	'偶尔无法播放重新点下剧集即可，或切换播放源和解析后再播放',
-	'观影记录可以记住你看到哪一集，不用每次搜索',
-	'苹果设备请允许屏幕旋转才可以全屏播放',
-	'部分安卓手机无法投屏，请用手机自带投屏或安装机顶盒版',
-	'限于平台制约，无法记录你看到每一集的第几分钟',
-	'广告都是资源库或者解析平台的，套路深勿相信！',
-	'如果喜欢这个app，请推荐给您的朋友'
+	'您所用的当前app版本即将失效，请及时更新',
+	'新版下载地址中文网址：http://看看电影.com',
+	'新版下载地址网址：http://app.kkdy2021.xyz',
+	'您当前版本App将于本月停用，请及时更新',
+	'新版本下载地址是中文网址：看看电影.com ',
+	'您当前版本app即将失效，请访问 看看电影.com 更新',
+	'您的app即将失效，请访问 看看电影.com app.kkdy2021.xyz 更新'
 	);
 var hotKeyWords='元龙|且听凤鸣|复杂的爱|亲爱的自己|大侠霍元甲|乘风破浪的姐姐|奥维尔号|斗罗大陆|天际浩劫|琉璃美人煞|且听凤鸣|信条|花木兰2020|索莱|重启之极海听雷|春江水暖|托马索|大卫·科波菲尔的个人史|漂亮书生|他其实没有那么爱你|穿盔甲的少女|非常目击|航海王|幸福还会来敲门|忘不了餐厅|且听凤鸣|极限挑战宝藏行|摩天大楼|月光恋|潮玩人类在哪里|青春环游记|乐队的夏天';
 hotKeyWords+='|上海王|如此可爱的我们|香肠派对|连环追击|怪兽猎人|哥斯拉2|狙击手|怪物先生|大幻术师|征途|哪吒之魔童降世|铁血神探';
