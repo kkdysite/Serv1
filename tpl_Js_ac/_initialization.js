@@ -15,7 +15,7 @@ var loader_time={
 	'bak':3
 };
 /* 首页公告 */
-var notetitle='重要通知！您的APP需要更新';
+var notetitle='<red>重要通知！您的APP需要更新</red>';
 var notecontent='因为成本问题，需要停用旧版app，请卸载后免费更新到最新版';
 notecontent+='新版下载地址中文网址： http://看看电影.com 英文网址：http://app.kkdy2021.xyz/';
 notecontent+='<br> 版本说明<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
@@ -24,6 +24,9 @@ notecontent+='本版app将在11月12日左右停止无法打开，我们提供�
 notecontent+='<div style="text-align: center;">==== 详细说明 ====</div>';
 notecontent+='安卓版 机顶盒x5版本 ios苹果版本 已经提供新版 并已经可以使用<br>';
 notecontent+='Win电脑版本 Mac电脑版 要晚几天更新<br>';
+notecontent+='手机或者自带浏览器浏览器地址栏输入中文网址 看看电影.com 即可下载更新最新版<br>';
+notecontent+='或者输入英文网址：app.kkdy2021.xyz <br>';
+notecontent+='如果实在不会操作，请联系邮箱 kkdysite@outlook.com 说明你的手机是安卓还是苹果<br>';
 notecontent+='</div>';
 
 var SharpUrl_dl='http://app.kkdy.website/';
