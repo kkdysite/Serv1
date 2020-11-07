@@ -37,10 +37,7 @@ if(window.location.port){
         static_file_suffix='?'+Math.random();
     }
 }
-if (WL=='local'){
     $.getScript('tpl_Js_ac/_initialization.js'+static_file_suffix, function(){});
-}else{
-    $.getScript('https://cdn.jsdelivr.net/gh/kkdysite/ServMian0827@master/tpl_Js_ac/_initialization.min.js'+static_file_suffix, function(){});
-}
+
 </script>
 
