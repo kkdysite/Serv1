@@ -15,7 +15,7 @@ var loader_time={
 	'bak':3
 };
 /* 首页公告 */
-var notetitle='<red>重要通知！您的APP需要更新</red>';
+var notetitle='<a href="#" class="button button-danger">重要通知！您的APP需要更新</a>';
 var notecontent='因为成本问题，需要停用旧版app，请卸载后免费更新到最新版';
 notecontent+='新版下载地址中文网址： http://看看电影.com 英文网址：http://app.kkdy2021.xyz/';
 notecontent+='<br> 版本说明<a href="javascript:Div_show_hide(\'MoreNote\',\'openMoreNote\',\' 详细 \')" class="openMoreNote"> 详细 </a>';
